@@ -1,0 +1,26 @@
+---
+import SearchIcon from "$components/icons/SearchIcon.astro"
+/**
+ * A simple button in the Header navigation to open the search modal.
+ */
+---
+
+<button class="header-nav-search-button">
+  <SearchIcon />
+  Search
+</button>
+<style>
+  @tailwind components;
+
+  @layer components {
+    button.header-nav-search-button {
+      @apply border border-transparent bg-neutral-100 px-2 py-1 rounded flex items-center gap-1 flex-grow;
+    }
+    button.header-nav-search-button:hover {
+      @apply border-neutral-500;
+    }
+    button.header-nav-search-button:focus {
+      @apply text-rose-600 border-rose-600;
+    }
+  }
+</style>

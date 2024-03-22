@@ -1,0 +1,17 @@
+---
+import Logo from "$components/Logo.astro"
+/**
+ * Header navigation used on our website layout
+ */
+---
+
+<footer
+  class="mt-18 mb-6 text-center border-t border-neutral-500 max-w-screen-lg mx-auto p-6"
+>
+  <p>
+    <Logo />v{import.meta.env.npm_package_version} (2024). Made by <a
+      href="https://goulven-clech.dev"
+      target="_blank">Goulven CLEC'H</a
+    >.
+  </p>
+</footer>

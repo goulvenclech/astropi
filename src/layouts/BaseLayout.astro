@@ -1,0 +1,28 @@
+---
+// Tailwind CSS imports
+import "$assets/app.css"
+/**
+ * Base layout of our Astro site, which includes the head and body tags.
+ * @param {string} title - The title of the page.
+ */
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astropi - Let's make a better doc" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Astropi</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,63 @@
+---
+// Astro imports
+import Logo from '$components/Logo.astro'
+import HeaderNavLink from '$components/header/HeaderNavLink.astro'
+import HeaderNavLinkExternal from '$components/header/HeaderNavLinkExternal.astro'
+import HeaderNavSearchButton from '$components/header/HeaderNavSearchButton.astro'
+// Icons imports
+// TODO: use Iconify to import icons conveniently
+import LearnIcon from '$components/icons/LearnIcon.astro'
+import ReferenceIcon from '$components/icons/ReferenceIcon.astro'
+import ChangelogIcon from '$components/icons/ChangelogIcon.astro'
+import ModuleIcon from '$components/icons/ModuleIcon.astro'
+import RessourceIcon from '$components/icons/RessourceIcon.astro'
+import StatusIcon from '$components/icons/StatusIcon.astro'
+import GithubIcon from '$components/icons/GithubIcon.astro'
+import SunIcon from '$components/icons/SunIcon.astro'
+import GlobeIcon from '$components/icons/GlobeIcon.astro'
+import DiscordIcon from '$components/icons/DiscordIcon.astro'
+/**
+ * Header navigation used on our website layout
+ */
+---
+
+<nav class="flex gap-2 m-6 items-center">
+  <Logo />
+  <HeaderNavLink url="/learn">
+    <LearnIcon />
+    Learn
+  </HeaderNavLink>
+  <HeaderNavLink url="/reference">
+    <ReferenceIcon />
+    Reference
+  </HeaderNavLink>
+  <HeaderNavLink url="/modules">
+    <ModuleIcon />
+    Modules
+  </HeaderNavLink>
+  <HeaderNavLink url="/changelog">
+    <ChangelogIcon />
+    Changelog
+  </HeaderNavLink>
+  <HeaderNavLink url="/resources">
+    <RessourceIcon />
+    Resources
+  </HeaderNavLink>
+  <HeaderNavLink url="/status">
+    <StatusIcon />
+    Status
+  </HeaderNavLink>
+  <HeaderNavSearchButton />
+  <HeaderNavLinkExternal url="">
+     <GlobeIcon />
+  </HeaderNavLinkExternal>
+  <HeaderNavLinkExternal url="">
+     <DiscordIcon />
+  </HeaderNavLinkExternal>
+  <HeaderNavLinkExternal url="">
+     <GithubIcon />  
+  </HeaderNavLinkExternal>
+  <HeaderNavLinkExternal url="">
+     <SunIcon />
+  </HeaderNavLinkExternal>
+</nav>

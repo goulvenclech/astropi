@@ -1,0 +1,19 @@
+---
+/**
+ * Logo component used notably in the Header as a link to the home page.
+ */
+---
+
+<a class="logo" href="/"> 🪐 Astropi </a>
+<style>
+  @tailwind components;
+
+  @layer components {
+    a.logo {
+      @apply font-bold mr-1;
+    }
+    a.logo:hover {
+      @apply text-rose-600;
+    }
+  }
+</style>
