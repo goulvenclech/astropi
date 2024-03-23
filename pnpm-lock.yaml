@@ -11,6 +11,15 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.5.8)(tailwindcss@3.4.1)
+  '@iconify-json/fa6-brands':
+    specifier: ^1.1.18
+    version: 1.1.18
+  '@iconify-json/heroicons':
+    specifier: ^1.1.20
+    version: 1.1.20
+  '@iconify/tailwind':
+    specifier: ^0.1.4
+    version: 0.1.4
   astro:
     specifier: ^4.5.8
     version: 4.5.8(typescript@5.4.3)
@@ -812,6 +821,28 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@iconify-json/fa6-brands@1.1.18:
+    resolution: {integrity: sha512-vmeJP06Xbj0XbVGiBHg0q8H3M894d4bGXKCmiHt6JqUdpiGcIV7r96N+BOU4ZS1+hvpV57fTfXlFPiUfxAIfkg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/heroicons@1.1.20:
+    resolution: {integrity: sha512-puNt1al/rDw8Rb5x8sfk20UA8AQjMskLMh63nSUBj+8I0lQ7LtX+0Qn8wow2xTXTEsynJ9xXLD8Aat53e0qi8A==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify/tailwind@0.1.4:
+    resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify/types@2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}

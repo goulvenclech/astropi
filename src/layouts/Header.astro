@@ -4,18 +4,7 @@ import Logo from '$components/Logo.astro'
 import HeaderNavLink from '$components/header/HeaderNavLink.astro'
 import HeaderNavLinkExternal from '$components/header/HeaderNavLinkExternal.astro'
 import HeaderNavSearchButton from '$components/header/HeaderNavSearchButton.astro'
-// Icons imports
-// TODO: use Iconify to import icons conveniently
-import LearnIcon from '$components/icons/LearnIcon.astro'
-import ReferenceIcon from '$components/icons/ReferenceIcon.astro'
-import ChangelogIcon from '$components/icons/ChangelogIcon.astro'
-import ModuleIcon from '$components/icons/ModuleIcon.astro'
-import RessourceIcon from '$components/icons/RessourceIcon.astro'
-import StatusIcon from '$components/icons/StatusIcon.astro'
-import GithubIcon from '$components/icons/GithubIcon.astro'
-import SunIcon from '$components/icons/SunIcon.astro'
-import GlobeIcon from '$components/icons/GlobeIcon.astro'
-import DiscordIcon from '$components/icons/DiscordIcon.astro'
+import DarkMode from '$components/icons/DarkMode.astro'
 /**
  * Header navigation used on our website layout
  */
@@ -24,40 +13,38 @@ import DiscordIcon from '$components/icons/DiscordIcon.astro'
 <nav class="flex gap-2 m-6 items-center">
   <Logo />
   <HeaderNavLink url="/learn">
-    <LearnIcon />
+    <span class="icon-[heroicons--academic-cap] text-xl" />
     Learn
   </HeaderNavLink>
   <HeaderNavLink url="/reference">
-    <ReferenceIcon />
+    <span class="icon-[heroicons--command-line] text-xl" />
     Reference
   </HeaderNavLink>
   <HeaderNavLink url="/modules">
-    <ModuleIcon />
+    <span class="icon-[heroicons--code-bracket-square] text-xl" />
     Modules
   </HeaderNavLink>
   <HeaderNavLink url="/changelog">
-    <ChangelogIcon />
+    <span class="icon-[heroicons--megaphone] text-xl" />
     Changelog
   </HeaderNavLink>
   <HeaderNavLink url="/resources">
-    <RessourceIcon />
+    <span class="icon-[heroicons--puzzle-piece] text-xl" />
     Resources
   </HeaderNavLink>
   <HeaderNavLink url="/status">
-    <StatusIcon />
+    <span class="icon-[heroicons--signal] text-xl" />
     Status
   </HeaderNavLink>
   <HeaderNavSearchButton />
   <HeaderNavLinkExternal url="">
-     <GlobeIcon />
+     <span class="icon-[heroicons--globe-alt-solid] text-xl" />
   </HeaderNavLinkExternal>
   <HeaderNavLinkExternal url="">
-     <DiscordIcon />
+     <span class="icon-[fa6-brands--discord] text-xl" />
   </HeaderNavLinkExternal>
   <HeaderNavLinkExternal url="">
-     <GithubIcon />  
+      <span class="icon-[fa6-brands--github] text-xl" /> 
   </HeaderNavLinkExternal>
-  <HeaderNavLinkExternal url="">
-     <SunIcon />
-  </HeaderNavLinkExternal>
+  <DarkMode />
 </nav>

@@ -4,6 +4,12 @@
 
 @layer base {
   /**
+    * BODY
+    */
+  body {
+    @apply bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100;
+  }
+  /**
     * LINKS (and links before/after)
     */
   p a {

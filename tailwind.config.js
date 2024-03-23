@@ -1,4 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+// Icons from Iconify. By default, FA Brands and Heroicons are included.
+// See -> https://github.com/iconify/iconify/tree/main/plugins/tailwind
+const { addDynamicIconSelectors } = require("@iconify/tailwind")
+/**
+ * This is the Tailwind CSS configuration file.
+ * @type {import('tailwindcss').Config}
+ * */
 export default {
   // See -> https://tailwindcss.com/docs/dark-mode
   darkMode: "class",
@@ -11,5 +17,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Iconify plugin
+    addDynamicIconSelectors(),
+  ],
 }
