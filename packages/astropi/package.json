@@ -1,0 +1,20 @@
+{
+  "name": "astropi",
+  "version": "0.0.1",
+  "scripts": {},
+  "main": "index.ts",
+  "author": "Goulven Clec'h <goulven.clech@protonmail.com>",
+  "description": "Build beautiful and accessible API documentations with Astro 🪐",
+  "keywords": [
+    "astro",
+    "documentation",
+    "docs",
+    "api",
+    "open-api",
+    "astropi"
+  ],
+  "license": "ISC",
+  "peerDependencies": {
+    "astro": "^4.0.0"
+  }
+}

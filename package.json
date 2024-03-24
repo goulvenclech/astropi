@@ -1,22 +1,13 @@
 {
-  "name": "astropi",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.5.9",
-    "@astrojs/tailwind": "^5.1.0",
-    "@iconify-json/fa6-brands": "^1.1.18",
-    "@iconify-json/heroicons": "^1.1.20",
-    "@iconify/tailwind": "^0.1.4",
-    "astro": "^4.5.8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.3"
+  "name": "astropi-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "astro": "^4.0.0"
   }
 }

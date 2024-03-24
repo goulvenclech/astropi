@@ -1,41 +1,54 @@
-# Astropi - Let's make a better doc 
+# Astropi - Let's make a better doc 🪐
 
 Astropi is a free and open-source project that helps you build beautiful and accessible API documentation for your projects. It's built with Astro, a fast and modern Static Site Generator.
 
-## 🚀 Project Structure
+## 🚀 How to use Astropi
 
-Inside of your Astro project, you'll see the following folders and files:
+Create a new Astropi project by running the following command:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+# If you use npm
+npm create astro@latest -- --template starlight
+# If you use yarn
+yarn create astro@latest --template starlight
+# If you use pnpm
+pnpm create astro@latest -- --template starlight
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Or add Astropi to an existing Astro project:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+# If you use npm
+npx astro add starlight
+# If you use yarn
+yarn astro add starlight
+# If you use pnpm
+pnpm astro add starlight
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+From there, read the generated `README.md` in your new project, or check out the [Astropi documentation](https://astropi.dev) for more information.
 
-All commands are run from the root of the project, from a terminal:
+## 👷 How to contribute
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Astropi is a community-driven project, and we welcome contributions of all kinds. If you experience any problem with our project, please [open an issue](). If you have any idea or suggestions, please open or join [a discussion]().
 
+If you want to contribute to Astropi, please read the [Contributing Guide](./CONTRIBUTING.md) and the [Code of Conduct](./CODE_OF_CONDUCT.md) before submitting a pull request. You can find more technical information about the project in the `README.md` files of each main directory:
+
+- `./packages/astropi/` contains the core of Astropi, including the components, styles, and utilities that power the project.
+
+- `./docs/` contains the Astropi documentation website (built with Astropi!)
+
+- `./packages/astropi-starter/` contains the Astropi starter template, which is cloned when you create a new Astropi project.
+
+## ⚖️ License
+
+Astropi is licensed under the [MIT License](./LICENSE.md). You are free to use, modify, and distribute this project. You must include the original license in any fork of this project. Attribution is appreciated.
+
+## ❤️ Aknowledgements
+
+Thanks [Astro](https://astro.build/), for being the core of Astropi and an amazing Static Site Generator.
+
+Thanks [Starlight](https://starlight.astro.build), for being the main inspiration for Astropi and our example of Astro Integration.
+
+Thanks [Readme.so](https://readme.so/) and [VitePress](https://vitepress.vuejs.org/), for inspiring us in the documentation design.
