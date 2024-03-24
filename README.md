@@ -1,5 +1,7 @@
 # Astropi - Let's make a better doc 🪐
 
+> ⚠️ WORK IN PROGRESS - THIS PACKAGE IS NOT PUBLISHED YET ⚠️
+
 Astropi is a free and open-source project that helps you build beautiful and accessible API documentation for your projects. It's built with Astro, a fast and modern Static Site Generator.
 
 ## 🚀 How to use Astropi
@@ -8,22 +10,22 @@ Create a new Astropi project by running the following command:
 
 ```bash
 # If you use npm
-npm create astro@latest -- --template starlight
+npm create astro@latest -- --template astropi
 # If you use yarn
-yarn create astro@latest --template starlight
+yarn create astro@latest --template astropi
 # If you use pnpm
-pnpm create astro@latest -- --template starlight
+pnpm create astro@latest -- --template astropi
 ```
 
 Or add Astropi to an existing Astro project:
 
 ```bash
 # If you use npm
-npx astro add starlight
+npx astro add astropi
 # If you use yarn
-yarn astro add starlight
+yarn astro add astropi
 # If you use pnpm
-pnpm astro add starlight
+pnpm astro add astropi
 ```
 
 
@@ -47,8 +49,8 @@ Astropi is licensed under the [MIT License](./LICENSE.md). You are free to use, 
 
 ## ❤️ Aknowledgements
 
-Thanks [Astro](https://astro.build/), for being the core of Astropi and an amazing Static Site Generator.
+Thanks [Astro](https://astro.build/) for being the core of Astropi and an amazing Static Site Generator.
 
-Thanks [Starlight](https://starlight.astro.build), for being the main inspiration for Astropi and our example of Astro Integration.
+Thanks [Starlight](https://starlight.astro.build) for being the main inspiration for Astropi and our example of Astro Integration.
 
-Thanks [Readme.so](https://readme.so/) and [VitePress](https://vitepress.vuejs.org/), for inspiring us in the documentation design.
+Thanks [Readme.so](https://readme.so/) and [VitePress](https://vitepress.vuejs.org/) for inspiring us in the documentation design.
