@@ -18,18 +18,18 @@ import SearchIcon from "../icons/SearchIcon.astro"
       gap: 0.25rem;
       align-items: center;
       border-radius: 0.25rem;
-      border-width: 1px;
-      border-color: transparent;
+      border: 1px solid transparent;
       background-color: var(--color-lighter);
     }
     .dark button.header-nav-search-button {
-      background-color: var(--color-darker);
+      background-color: var(--color-dark);
     }
     button.header-nav-search-button:hover {
-      @apply border-neutral-500;
+      border-color: var(--color-neutral);
     }
     button.header-nav-search-button:focus {
-      @apply text-rose-600 border-rose-600;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 </style>

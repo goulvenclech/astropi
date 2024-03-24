@@ -1,11 +1,13 @@
 /**
  * Vite plugin to create a virtual module with user configuration
  * This allow us to access the user configuration like this :
- * `import { config } from "virtual:astropi-user-config"`
+ * `import { userConfig } from "virtual:astropi-user-config"`
  * See -> https://vitejs.dev/guide/api-plugin#virtual-modules-convention
  * @returns
  */
-export default function vitePluginAstropiUserConfig(opts: any) {
+export default function vitePluginAstropiUserConfig(
+  userConfig: AstropiUserConfig
+) {
   const virtualModuleId = "virtual:astropi-user-config"
   const resolvedVirtualModuleId = "\0" + virtualModuleId
 
@@ -19,7 +21,7 @@ export default function vitePluginAstropiUserConfig(opts: any) {
     },
     load(id: any) {
       if (id === resolvedVirtualModuleId) {
-        return `export const config = ${JSON.stringify(opts)}`
+        return `export const userConfig = ${JSON.stringify(userConfig)}`
       }
     },
   }

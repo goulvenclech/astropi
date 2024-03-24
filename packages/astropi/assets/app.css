@@ -12,11 +12,11 @@
     --color-secondary: #14b8a6;
     --color-secondary-dark: #115e59;
     --color-white: #ffffff;
-    --color-lighter: #f5f5f5;
-    --color-light: #d4d4d4;
-    --color-neutral: #737373;
-    --color-dark: #404040;
-    --color-darker: #171717;
+    --color-lighter: #f4f4f5;
+    --color-light: #d4d4d8;
+    --color-neutral: #71717a;
+    --color-dark: #27272a;
+    --color-darker: #18181b;
     --color-black: #000000;
   }
   /**

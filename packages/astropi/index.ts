@@ -17,10 +17,11 @@ import {
  * and just has to configure it to their needs / add their own content.
  * See reference -> https://docs.astro.build/en/reference/integrations-reference
  */
-export default function AstropiIntegration({
-  projectName,
-  archetypes,
-}: AstropiUserConfig): AstroIntegration {
+export default function AstropiIntegration(
+  userConfig: AstropiUserConfig
+): AstroIntegration {
+  // Get what we need from the user Config
+  const { archetypes } = userConfig
   return {
     name: "astropi",
     hooks: {
@@ -37,7 +38,7 @@ export default function AstropiIntegration({
         // Update the Astro config
         updateConfig({
           vite: {
-            plugins: [vitePluginAstropiUserConfig(projectName)],
+            plugins: [vitePluginAstropiUserConfig(userConfig)],
           },
         })
       },

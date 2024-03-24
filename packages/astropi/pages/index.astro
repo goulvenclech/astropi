@@ -1,12 +1,12 @@
 ---
-import { config } from "virtual:astropi-user-config"
+import { userConfig } from "virtual:astropi-user-config"
 import Layout from "../layouts/Layout.astro"
 import LandingHero from "../layouts/landing/LandingHero.astro"
 import LandingFeatures from "../layouts/landing/LandingFeatures.astro"
 /**
  * This is the default landing page of an Astropi project.
  */
-const { projectName } = config
+const { projectName } = userConfig
 ---
 
 <Layout title="Welcome">

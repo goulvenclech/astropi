@@ -9,13 +9,19 @@ export default defineConfig({
       archetypes: [
         {
           path: "learn",
-          title: "Learn",
+          name: "Learn",
           collection: "blog",
           type: "blog-content",
         },
         {
+          path: "docs",
+          name: "Docs",
+          collection: "docs",
+          type: "docs-content",
+        },
+        {
           path: "changelog",
-          title: "Changelog",
+          name: "Changelog",
           collection: "changelog",
           type: "blog-content",
         },

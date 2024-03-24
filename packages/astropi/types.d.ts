@@ -14,5 +14,5 @@ type Archetype = {
 }
 // Used by "./virtual-user-config.ts"
 declare module "virtual:astropi-user-config" {
-  export const config: AstropiUserConfig
+  export const userConfig: AstropiUserConfig
 }
