@@ -10,7 +10,7 @@ import DarkMode from "../components/icons/DarkMode.astro"
  */
 ---
 
-<nav class="flex gap-2 m-6 items-center">
+<nav class="header-nav">
   <Logo />
   <HeaderNavLink url="/learn">
     <span class="icon-[heroicons--academic-cap] text-xl"></span>
@@ -24,7 +24,7 @@ import DarkMode from "../components/icons/DarkMode.astro"
     <span class="icon-[heroicons--code-bracket-square] text-xl"></span>
     Modules
   </HeaderNavLink>
-  <HeaderNavLink url="/changelog">
+  <HeaderNavLink url="/changelog" is_current>
     <span class="icon-[heroicons--megaphone] text-xl"></span>
     Changelog
   </HeaderNavLink>
@@ -48,3 +48,13 @@ import DarkMode from "../components/icons/DarkMode.astro"
   </HeaderNavLinkExternal>
   <DarkMode />
 </nav>
+<style is:global>
+  @layer components {
+    nav.header-nav {
+      display: flex;
+      margin: 1.5rem;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+</style>

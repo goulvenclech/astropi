@@ -7,18 +7,19 @@ const { url } = Astro.props
 ---
 
 <a href={url} class="header-nav-link-external"><slot /></a>
-<style>
-  @tailwind components;
-
+<style is:global>
   @layer components {
     a.header-nav-link-external {
-      @apply p-1 text-base items-center flex;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
     a.header-nav-link-external:hover {
-      @apply hover:text-rose-600;
+      color: var(--color-primary);
     }
     a.header-nav-link-external:active {
-      @apply active:text-rose-800;
+      color: var(--color-primary-dark);
     }
   }
 </style>

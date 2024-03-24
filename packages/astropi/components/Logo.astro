@@ -5,15 +5,15 @@
 ---
 
 <a class="logo" href="/"> 🪐 Astropi </a>
-<style>
-  @tailwind components;
-
+<style is:global>
   @layer components {
     a.logo {
-      @apply font-bold mr-1;
+      margin-right: 0.25rem;
+      font-weight: 700;
+      text-decoration-line: none;
     }
     a.logo:hover {
-      @apply text-rose-600;
+      color: var(--color-primary);
     }
   }
 </style>

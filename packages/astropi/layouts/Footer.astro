@@ -5,9 +5,7 @@ import Logo from "../components/Logo.astro"
  */
 ---
 
-<footer
-  class="mt-18 mb-6 text-center border-t border-neutral-500 max-w-screen-lg mx-auto p-6"
->
+<footer>
   <p>
     <Logo />v{import.meta.env.npm_package_version} (2024). Made by <a
       href="https://goulven-clech.dev"
@@ -15,3 +13,11 @@ import Logo from "../components/Logo.astro"
     >.
   </p>
 </footer>
+<style is:global>
+  footer {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 1024px;
+    text-align: center;
+  }
+</style>

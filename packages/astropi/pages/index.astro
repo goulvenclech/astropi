@@ -10,8 +10,14 @@ const { projectName } = config
 ---
 
 <Layout title="Welcome">
-  <main class="max-w-screen-lg mx-auto px-6">
+  <main>
     <LandingHero />
     <LandingFeatures />
   </main>
 </Layout>
+
+<style>
+  main {
+    max-width: 1024px;
+  }
+</style>

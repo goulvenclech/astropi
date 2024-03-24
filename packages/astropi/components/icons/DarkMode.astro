@@ -9,9 +9,7 @@
 ---
 
 <button name="darkMode"></button>
-<style>
-  @tailwind components;
-
+<style is:global>
   @layer components {
     button[name="darkMode"] {
       @apply p-1 text-base items-center flex;

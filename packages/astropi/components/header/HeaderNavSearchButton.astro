@@ -9,12 +9,21 @@ import SearchIcon from "../icons/SearchIcon.astro"
   <SearchIcon />
   Search
 </button>
-<style>
-  @tailwind components;
-
+<style is:global>
   @layer components {
     button.header-nav-search-button {
-      @apply border border-transparent bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded flex items-center gap-1 flex-grow;
+      display: flex;
+      padding: 0.25rem 0.5rem;
+      flex-grow: 1;
+      gap: 0.25rem;
+      align-items: center;
+      border-radius: 0.25rem;
+      border-width: 1px;
+      border-color: transparent;
+      background-color: var(--color-lighter);
+    }
+    .dark button.header-nav-search-button {
+      background-color: var(--color-darker);
     }
     button.header-nav-search-button:hover {
       @apply border-neutral-500;
