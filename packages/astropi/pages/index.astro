@@ -1,8 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import { config } from "virtual:astropi-user-config"
 /**
  * This is the default landing page of an Astropi project.
  */
+const { projectName } = config
 ---
 
-<BaseLayout title="Welcome">Bonjour, ceci est une page d'accueil. </BaseLayout>
+<BaseLayout title="Welcome"
+  >Bonjour, ceci est la page d'accueil de {projectName}.
+</BaseLayout>

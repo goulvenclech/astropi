@@ -1,4 +1,5 @@
 import type { AstroIntegration } from "astro"
+import vitePluginAstropiUserConfig from "./utils/virtual-user-config"
 /**
  * UNDERSTANDING ASTRO INTEGRATIONS API
  * Astropi isn't a "starter" Astro project, where the user has to clone a whole project
@@ -10,13 +11,15 @@ import type { AstroIntegration } from "astro"
  * and just has to configure it to their needs / add their own content.
  * See reference -> https://docs.astro.build/en/reference/integrations-reference
  */
-export default function AstropiIntegration(opts: any): AstroIntegration {
+export default function AstropiIntegration(
+  opts: AstropiUserConfig
+): AstroIntegration {
   return {
     name: "astropi",
     hooks: {
       // This hooks run on initialization, before either the Vite or Astro config have resolved.
       // We use this hook to modify the Astro config, and inject our custom routes.
-      "astro:config:setup": async ({ injectRoute }) => {
+      "astro:config:setup": async ({ injectRoute, updateConfig }) => {
         // Get user intergration config
         console.log("Astropi config:", opts)
         // Inject a route for the homepage
@@ -24,6 +27,12 @@ export default function AstropiIntegration(opts: any): AstroIntegration {
           pattern: "/",
           entrypoint: "astropi/pages/index.astro",
           prerender: true,
+        })
+        // Update the Astro config
+        updateConfig({
+          vite: {
+            plugins: [vitePluginAstropiUserConfig(opts)],
+          },
         })
       },
     },
