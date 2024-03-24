@@ -1,0 +1,50 @@
+---
+// Astro imports
+import Logo from "../components/Logo.astro"
+import HeaderNavLink from "../components/header/HeaderNavLink.astro"
+import HeaderNavLinkExternal from "../components/header/HeaderNavLinkExternal.astro"
+import HeaderNavSearchButton from "../components/header/HeaderNavSearchButton.astro"
+import DarkMode from "../components/icons/DarkMode.astro"
+/**
+ * Header navigation used on our website layout
+ */
+---
+
+<nav class="flex gap-2 m-6 items-center">
+  <Logo />
+  <HeaderNavLink url="/learn">
+    <span class="icon-[heroicons--academic-cap] text-xl"></span>
+    Learn
+  </HeaderNavLink>
+  <HeaderNavLink url="/reference">
+    <span class="icon-[heroicons--command-line] text-xl"></span>
+    Reference
+  </HeaderNavLink>
+  <HeaderNavLink url="/modules">
+    <span class="icon-[heroicons--code-bracket-square] text-xl"></span>
+    Modules
+  </HeaderNavLink>
+  <HeaderNavLink url="/changelog">
+    <span class="icon-[heroicons--megaphone] text-xl"></span>
+    Changelog
+  </HeaderNavLink>
+  <HeaderNavLink url="/resources">
+    <span class="icon-[heroicons--puzzle-piece] text-xl"></span>
+    Resources
+  </HeaderNavLink>
+  <HeaderNavLink url="/status">
+    <span class="icon-[heroicons--signal] text-xl"></span>
+    Status
+  </HeaderNavLink>
+  <HeaderNavSearchButton />
+  <HeaderNavLinkExternal url="">
+    <span class="icon-[heroicons--globe-alt-solid] text-xl"></span>
+  </HeaderNavLinkExternal>
+  <HeaderNavLinkExternal url="">
+    <span class="icon-[fa6-brands--discord] text-xl"></span>
+  </HeaderNavLinkExternal>
+  <HeaderNavLinkExternal url="">
+    <span class="icon-[fa6-brands--github] text-xl"></span>
+  </HeaderNavLinkExternal>
+  <DarkMode />
+</nav>

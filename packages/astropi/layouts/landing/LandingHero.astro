@@ -1,0 +1,42 @@
+---
+import HeroDraw from "../../components/icons/HeroDraw.astro"
+/**
+ * WIP
+ */
+---
+
+<section class="my-18 grid grid-cols-2 items-center">
+  <div>
+    <h1 class="text-4xl font-bold leading-relaxed">Let's make a better doc</h1>
+    <p class="max-w-[55ch]">
+      Astropi is a free and open-source project that helps you build beautiful
+      and accessible API documentation for your projects. It's built with
+      <a href="https://astro.build" target="_blank">Astro</a>, a fast and modern
+      Static Site Generator.
+      <div class="flex my-3 gap-3">
+        <a
+          href="/about"
+          class="hero-button hover:text-rose-600 hover:border-rose-600"
+        >
+          <span class="icon-[heroicons--academic-cap] text-lg"></span>
+          Getting started
+        </a>
+        <a
+          href="/about"
+          class="hero-button hover:text-teal-600 hover:border-teal-600"
+        >
+          <span class="icon-[heroicons--sparkles] text-lg"></span>
+          Release 1.0.0: What's new?
+        </a>
+      </div>
+    </p>
+  </div>
+  <div>
+    <HeroDraw />
+  </div>
+</section>
+<style>
+  a.hero-button {
+    @apply border border-neutral-500 px-2 py-1 rounded flex items-center gap-1.5;
+  }
+</style>

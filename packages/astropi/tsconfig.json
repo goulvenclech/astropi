@@ -1,11 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "types": ["astro/env"],
-    "paths": {
-      "$components/*": ["/components/*"],
-      "$layouts/*": ["/layouts/*"],
-      "$assets/*": ["/assets/*"]
-    }
+    "types": ["astro/env"]
   }
 }

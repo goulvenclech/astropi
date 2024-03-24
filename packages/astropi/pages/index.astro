@@ -1,12 +1,17 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
 import { config } from "virtual:astropi-user-config"
+import Layout from "../layouts/Layout.astro"
+import LandingHero from "../layouts/landing/LandingHero.astro"
+import LandingFeatures from "../layouts/landing/LandingFeatures.astro"
 /**
  * This is the default landing page of an Astropi project.
  */
 const { projectName } = config
 ---
 
-<BaseLayout title="Welcome"
-  >Bonjour, ceci est la page d'accueil de {projectName}.
-</BaseLayout>
+<Layout title="Welcome">
+  <main class="max-w-screen-lg mx-auto px-6">
+    <LandingHero />
+    <LandingFeatures />
+  </main>
+</Layout>
