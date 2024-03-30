@@ -1,6 +1,6 @@
 {
   "name": "astropi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {},
   "main": "index.ts",
   "author": "Goulven Clec'h <goulven.clech@protonmail.com>",
