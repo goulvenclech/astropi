@@ -1,4 +1,4 @@
-import { blogContentCollection } from "astropi"
+import { blogContentCollection } from "@goulvenclech/astropi"
 
 export const collections = {
   blog: blogContentCollection,

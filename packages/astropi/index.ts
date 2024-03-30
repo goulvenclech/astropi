@@ -31,7 +31,7 @@ export default function AstropiIntegration(
         // Inject a route for the homepage
         injectRoute({
           pattern: "/",
-          entrypoint: "astropi/pages/index.astro",
+          entrypoint: "@goulvenclech/astropi/pages/index.astro",
           prerender: true,
         })
         generateCollections(injectRoute, archetypes)

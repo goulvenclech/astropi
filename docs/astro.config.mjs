@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config"
-import astropi from "astropi"
+import astropi from "@goulvenclech/astropi"
 
 // https://astro.build/config
 export default defineConfig({

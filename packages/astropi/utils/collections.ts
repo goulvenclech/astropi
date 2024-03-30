@@ -39,13 +39,13 @@ export function generateCollections(
 function getEntryPoint(archetype: Archetype): string {
   switch (archetype.type) {
     case "blog-content":
-      return "astropi/pages/blog.astro"
+      return "@goulvenclech/astropi/pages/blog.astro"
     case "docs-content":
-      return "astropi/pages/docs-content.astro"
+      return "@goulvenclech/astropi/pages/docs-content.astro"
     case "docs-openapi":
-      return "astropi/pages/docs-openapi.astro"
+      return "@goulvenclech/astropi/pages/docs-openapi.astro"
     default:
-      return "astropi/pages/index.astro"
+      return "@goulvenclech/astropi/pages/index.astro"
   }
 }
 
@@ -56,8 +56,8 @@ function getEntryPoint(archetype: Archetype): string {
 function getDynamicEntryPoint(archetype: Archetype): string {
   switch (archetype.type) {
     case "blog-content":
-      return "astropi/pages/[...blog].astro"
+      return "@goulvenclech/astropi/pages/[...blog].astro"
     default:
-      return "astropi/pages/index.astro"
+      return "@goulvenclech/astropi/pages/index.astro"
   }
 }
