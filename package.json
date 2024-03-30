@@ -1,13 +1,19 @@
 {
   "name": "astropi-root",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "version": "pnpm changeset version && pnpm i --no-frozen-lockfile"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "packageManager": "pnpm@8.11.0",
   "devDependencies": {
     "astro": "^4.0.0"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
   }
 }

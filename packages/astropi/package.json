@@ -1,10 +1,17 @@
 {
   "name": "astropi",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {},
   "main": "index.ts",
   "author": "Goulven Clec'h <goulven.clech@protonmail.com>",
   "description": "Build beautiful and accessible API documentations with Astro 🪐",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goulvenclech/astropi",
+    "directory": "packages/astropi"
+  },
+  "bugs": "https://github.com/goulvenclech/astropi/issues",
+  "homepage": "https://astropi.goulven-clech.dev",
   "keywords": [
     "astro",
     "documentation",
@@ -13,7 +20,7 @@
     "open-api",
     "astropi"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "astro": "^4.0.0"
   }
