@@ -8,16 +8,10 @@ export default defineConfig({
       projectName: "Astropi",
       archetypes: [
         {
-          path: "learn",
-          name: "Learn",
+          path: "blog",
+          name: "Blog",
           collection: "blog",
           type: "blog-content",
-        },
-        {
-          path: "docs",
-          name: "Docs",
-          collection: "docs",
-          type: "docs-content",
         },
         {
           path: "changelog",

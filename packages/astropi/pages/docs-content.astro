@@ -1,5 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
+/**
+ * This is used as the index page of docs' collections (based on MDX files).
+ */
 ---
 
-<Layout title="Docs content"> Ceci est une doc basée sur des MDXs.</Layout>
+<Layout title="Welcome">
+  <main>
+    <section>
+      <h1>Content docs:</h1>
+    </section>
+  </main>
+</Layout>
+<style>
+  main {
+    max-width: 70ch;
+  }
+</style>

@@ -38,6 +38,12 @@
     margin: 0 auto;
   }
   /**
+    * SECTION
+    */
+  section {
+    margin: 5rem 0;
+  }
+  /**
     * LINKS (and links before/after)
     */
   p a {

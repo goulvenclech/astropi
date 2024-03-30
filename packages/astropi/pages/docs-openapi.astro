@@ -1,7 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro"
+/**
+ * This is used as the index page of docs' collections (based on Yaml OpenAPI files).
+ */
 ---
 
-<Layout title="Docs OpenAPI">
-  Ceci est une doc basée sur des YAML OpenAPI.</Layout
->
+<Layout title="Welcome">
+  <main>
+    <aside></aside>
+    <section>
+      <h1>OpenAPI docs:</h1>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 70ch;
+  }
+</style>

@@ -1,5 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import { getCurrentArchetype } from "../utils/archetypes"
+import { getCollectionEntries } from "../utils/collections-entries"
+/**
+ * This is used as the index page of blog's collections.
+ */
+const archetype = getCurrentArchetype(Astro.url)
+
+const allBlogEntries = await getCollectionEntries(archetype?.collection)
 ---
 
-<Layout title="Blog"> Ceci est un blog </Layout>
+<Layout title="Welcome">
+  <main>
+    <section>
+      <h1>{archetype?.name}</h1>
+    </section>
+    <section>
+      {
+        allBlogEntries.map((entry) => (
+          <p>
+            <a href={archetype?.path + "/" + entry.slug}>{entry.data.title}</a>
+          </p>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
+<style>
+  main {
+    max-width: 70ch;
+  }
+</style>

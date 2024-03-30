@@ -1,11 +1,11 @@
 import type { AstroIntegration } from "astro"
 import vitePluginAstropiUserConfig from "./utils/virtual-user-config"
+import { generateCollections } from "./utils/collections"
 import {
-  generateCollections,
   blogContentCollection,
   docsContentCollection,
   docsOpenApiCollection,
-} from "./utils/collections"
+} from "./utils/collections-schemas"
 /**
  * UNDERSTANDING ASTRO INTEGRATIONS API
  * Astropi isn't a "starter" Astro project, where the user has to clone a whole project
