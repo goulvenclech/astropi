@@ -44,6 +44,71 @@
     margin: 5rem 0;
   }
   /**
+    * TYPOGRAPHY
+    */
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 1.5rem;
+  }
+  p {
+    margin: 0.75rem 0;
+  }
+  /**
+    * BUTTONS
+    */
+  .button {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    gap: 0.25rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-neutral);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .button-alt:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+  }
+  /**
+    * CARDS
+    */
+  .card {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    gap: 0.25rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-neutral);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .card-alt:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+  }
+  /**
     * LINKS (and links before/after)
     */
   p a {

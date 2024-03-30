@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "",
+  "type": "module",
   "scripts": {
     "version": "pnpm changeset version && pnpm i --no-frozen-lockfile"
   },
@@ -14,6 +15,7 @@
     "astro": "^4.5.12"
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.1"
+    "@changesets/cli": "^2.27.1",
+    "prettier": "^3.2.5"
   }
 }

@@ -10,14 +10,16 @@ const { projectName } = userConfig
 ---
 
 <Layout title="Welcome">
-  <main>
+  <main class="landing-main">
     <LandingHero />
     <LandingFeatures />
   </main>
 </Layout>
 
-<style>
-  main {
-    max-width: 1024px;
+<style is:global>
+  @layer components {
+    main.landing-main {
+      max-width: 1024px;
+    }
   }
 </style>

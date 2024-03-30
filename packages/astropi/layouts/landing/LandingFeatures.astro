@@ -6,28 +6,28 @@
 
 <section class="my-18">
   <h2 class="text-xl font-bold">Features</h2>
-  <div class="grid grid-cols-2 gap-3 mt-3">
-    <article>
+  <div class="landing-features-grid">
+    <article class="card">
       <h3 class="font-semibold">Beautiful and accesible</h3>
       <p>
         We provide a beautiful and accesible design for your API documentation.
       </p>
     </article>
-    <article>
+    <article class="card card-alt">
       <h3 class="font-semibold">Powered by Astro</h3>
       <p>
         Astro is a modern static site generator that help us to build fast and
         modern websites.
       </p>
     </article>
-    <article>
+    <article class="card card-alt">
       <h3 class="font-semibold">Powered by Astro</h3>
       <p>
         Astro is a modern static site generator that help us to build fast and
         modern websites.
       </p>
     </article>
-    <article>
+    <article class="card">
       <h3 class="font-semibold">Beautiful and accesible</h3>
       <p>
         We provide a beautiful and accesible design for your API documentation.
@@ -35,7 +35,15 @@
     </article>
   </div>
 
-  <style>
+  <style is:global>
+    @layer components {
+      .landing-features-grid {
+        display: grid;
+        margin-top: 0.75rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+    }
     article {
       @apply p-3 border border-neutral-500 rounded;
     }

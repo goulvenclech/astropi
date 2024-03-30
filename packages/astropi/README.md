@@ -28,4 +28,4 @@ yarn astro add @goulvenclech/astropi
 pnpm astro add @goulvenclech/astropi
 ```
 
-From there, read the generated `README.md` in your new project, or check out the [Astropi documentation](https://astropi.dev) for more information.
+From there, read the generated `README.md` in your new project, or check out the [Astropi documentation](https://astropi.goulven-clech.dev) for more information.
