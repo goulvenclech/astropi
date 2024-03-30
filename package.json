@@ -11,7 +11,7 @@
   "license": "ISC",
   "packageManager": "pnpm@8.11.0",
   "devDependencies": {
-    "astro": "^4.0.0"
+    "astro": "^4.5.12"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1"

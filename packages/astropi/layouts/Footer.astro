@@ -1,5 +1,6 @@
 ---
 import Logo from "../components/Logo.astro"
+import packageJson from "@goulvenclech/astropi/package.json"
 /**
  * Header navigation used on our website layout
  */
@@ -7,7 +8,7 @@ import Logo from "../components/Logo.astro"
 
 <footer>
   <p>
-    <Logo />v{import.meta.env.npm_package_version} (2024). Made by <a
+    <Logo />v{packageJson.version} (2024). Made by <a
       href="https://goulven-clech.dev"
       target="_blank">Goulven CLEC'H</a
     >.

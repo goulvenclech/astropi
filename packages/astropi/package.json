@@ -25,6 +25,11 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "exports": {
+    ".": "./index.ts",
+    "./pages/*": "./pages/*",
+    "./package.json": "./package.json"
+  },
   "peerDependencies": {
     "astro": "^4.0.0"
   }
