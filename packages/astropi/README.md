@@ -1,14 +1,31 @@
-# Astropi - Core package 🪐
+# Astropi - Let's make a better doc 🪐
 
-This package contains the core of Astropi, including the components, styles, and utilities that power the project. 
+Astropi is a free and open-source project that helps you build beautiful and accessible API documentation for your projects. It's built with [Astro](https://astro.build/), a fast and modern Static Site Generator.
 
-## 👀 Understanding Astropi
+This core package contains the components, styles, and utilities that power the project.
 
-- Astropi is not a simple "starter" template, but a Astro Integration
-. Read more about it and see the main `astropi()` function in -> `packages/astropi/index.ts`.
+## 🚀 How to use Astropi
 
-- Astropi provides a few zod schemas to help you build your documentation, and to generate pages from the user configuration. You can find them in -> `packages/astropi/utils/collections.ts`.
+Create a new Astropi project by running the following command:
 
-- Astropi comes with a few components and pages to help you build your documentation. You can find them in -> `packages/astropi/components/` & `packages/astropi/layouts/` & `packages/astropi/pages/`.
+```bash
+# If you use npm
+npm create astro --template github:goulvench/astropi/starter
+# If you use yarn
+yarn create astro --template github:goulvench/astropi/starter
+# If you use pnpm
+pnpm create astro --template github:goulvench/astropi/starter
+```
 
-- Astropi exposes the user configuration trough a Vite plugin with a virtual module. You can find it in -> `packages/astropi/utils/virtual-user-config.ts`.
+Or add Astropi to an existing Astro project:
+
+```bash
+# If you use npm
+npx astro add @goulvenclech/astropi
+# If you use yarn
+yarn astro add @goulvenclech/astropi
+# If you use pnpm
+pnpm astro add @goulvenclech/astropi
+```
+
+From there, read the generated `README.md` in your new project, or check out the [Astropi documentation](https://astropi.dev) for more information.

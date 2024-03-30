@@ -1,8 +1,8 @@
 {
-  "name": "@goulvenclech/astropi-docs",
+  "name": "@goulvenclech/astropi-starter",
   "private": true,
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,7 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@goulvenclech/astropi": "workspace:*",
+    "@goulvenclech/astropi": "^0.1.0",
     "astro": "^4.0.0"
   },
   "devDependencies": {}

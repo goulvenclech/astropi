@@ -1,8 +1,6 @@
 # Astropi - Let's make a better doc 🪐
 
-> ⚠️ WORK IN PROGRESS - THIS PACKAGE IS NOT PUBLISHED YET ⚠️
-
-Astropi is a free and open-source project that helps you build beautiful and accessible API documentation for your projects. It's built with Astro, a fast and modern Static Site Generator.
+Astropi is a free and open-source project that helps you build beautiful and accessible API documentation for your projects. It's built with [Astro](https://astro.build/), a fast and modern Static Site Generator.
 
 ## 🚀 How to use Astropi
 
@@ -10,24 +8,23 @@ Create a new Astropi project by running the following command:
 
 ```bash
 # If you use npm
-npm create astro@latest -- --template astropi
+npm create astro --template github:goulvench/astropi/starter
 # If you use yarn
-yarn create astro@latest --template astropi
+yarn create astro --template github:goulvench/astropi/starter
 # If you use pnpm
-pnpm create astro@latest -- --template astropi
+pnpm create astro --template github:goulvench/astropi/starter
 ```
 
 Or add Astropi to an existing Astro project:
 
 ```bash
 # If you use npm
-npx astro add astropi
+npx astro add @goulvenclech/astropi
 # If you use yarn
-yarn astro add astropi
+yarn astro add @goulvenclech/astropi
 # If you use pnpm
-pnpm astro add astropi
+pnpm astro add @goulvenclech/astropi
 ```
-
 
 From there, read the generated `README.md` in your new project, or check out the [Astropi documentation](https://astropi.dev) for more information.
 
