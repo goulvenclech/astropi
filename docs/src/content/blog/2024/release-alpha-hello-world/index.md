@@ -1,8 +1,8 @@
 ---
-title: "Alpha release"
+title: "Alpha 0.1 - Hello World 👋"
+date: 2023-03-31
+abstract: "Astropi is an Astro Integration that helps you build beautiful and accessible API documentation for your projects."
 ---
-
-Hello world 👋
 
 I just published Astropi on NPM, so you can start using it by running the following command:
 

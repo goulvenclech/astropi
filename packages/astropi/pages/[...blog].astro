@@ -16,14 +16,24 @@ const { Content } = await entry.render()
   <main>
     <section>
       <h1>{entry.data.title}</h1>
-    </section>
-    <section>
-      <Content />
+      <p>{entry.data.abstract}</p>
+      <p>
+        Published on {
+          entry.data.date.toLocaleString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        }
+        <section>
+          <Content />
+        </section>
+      </p>
     </section>
   </main>
+  <style>
+    main {
+      max-width: 70ch;
+    }
+  </style>
 </Layout>
-<style>
-  main {
-    max-width: 70ch;
-  }
-</style>
