@@ -1,6 +1,9 @@
-import { blogContentCollection } from "@goulvenclech/astropi"
+import {
+  blogContentCollection,
+  docsContentCollection,
+} from "@goulvenclech/astropi"
 
 export const collections = {
   blog: blogContentCollection,
-  learn: blogContentCollection,
+  learn: docsContentCollection,
 }

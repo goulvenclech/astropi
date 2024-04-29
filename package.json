@@ -12,7 +12,7 @@
   "license": "ISC",
   "packageManager": "pnpm@8.11.0",
   "devDependencies": {
-    "astro": "^4.5.12"
+    "astro": "^4.7.0"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1",

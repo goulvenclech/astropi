@@ -11,7 +11,7 @@ export default defineConfig({
           path: "learn",
           name: "Learn",
           collection: "learn",
-          type: "blog-content",
+          type: "docs-content",
         },
         {
           path: "blog",

@@ -1,14 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import { getCurrentArchetype } from "../utils/archetypes"
+import { getCollectionEntries } from "../utils/collections-entries"
 /**
- * This is used as the index page of docs' collections (based on MDX files).
+ * This is used as the index page of blog's collections.
  */
+const archetype = getCurrentArchetype(Astro.url)
+
+const allDocsEntries = await getCollectionEntries(archetype?.collection)
 ---
 
 <Layout title="Welcome">
   <main>
     <section>
-      <h1>Content docs:</h1>
+      <h1>{archetype?.name}</h1>
+    </section>
+    <section>
+      {
+        allDocsEntries.map((entry) => (
+          <p>
+            <a href={archetype?.path + "/" + entry.slug}>{entry.data.title}</a>
+          </p>
+        ))
+      }
     </section>
   </main>
 </Layout>

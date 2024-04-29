@@ -57,6 +57,10 @@ function getDynamicEntryPoint(archetype: Archetype): string {
   switch (archetype.type) {
     case "blog-content":
       return "@goulvenclech/astropi/pages/[...blog].astro"
+    case "docs-content":
+      return "@goulvenclech/astropi/pages/[...docs-content].astro"
+    case "docs-openapi":
+      return "@goulvenclech/astropi/pages/[...docs-openapi].astro"
     default:
       return "@goulvenclech/astropi/pages/index.astro"
   }

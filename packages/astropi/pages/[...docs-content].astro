@@ -1,0 +1,29 @@
+---
+import { getCollectionTypeEntries } from "../utils/collections-entries"
+import Layout from "../layouts/Layout.astro"
+/**
+ * this generate the pages inside blog's collections.
+ */
+export async function getStaticPaths() {
+  return getCollectionTypeEntries("docs-content")
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<Layout title="Welcome">
+  <main>
+    <section>
+      <h1>{entry.data.title}</h1>
+    </section>
+    <section>
+      <Content />
+    </section>
+  </main>
+</Layout>
+<style>
+  main {
+    max-width: 70ch;
+  }
+</style>

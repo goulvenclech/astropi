@@ -48,6 +48,5 @@ export async function getCollectionEntries(collection: string) {
   const allBlogContentEntries = allAstropiCollectionsEntries
     .flat()
     .filter((entry) => entry.collection === collection)
-  console.log(allBlogContentEntries)
   return allBlogContentEntries
 }
