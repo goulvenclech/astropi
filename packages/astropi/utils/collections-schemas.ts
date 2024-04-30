@@ -3,7 +3,7 @@
  * This module contains all Astropi collections default Zod schemas.
  * `index.ts` publicly exports them for Users use or extension.
  */
-import { z } from "astro/zod"
+import { date, z } from "astro/zod"
 /**
  * Default collection for a blog based on MDX files.
  */
@@ -12,6 +12,8 @@ export const blogContentCollection = {
   schema: z.object({
     type: z.literal("blog-content").default("blog-content"),
     title: z.string(),
+    abstract: z.string(),
+    date: z.date(),
   }),
 }
 
