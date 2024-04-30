@@ -98,6 +98,11 @@
     cursor: pointer;
   }
 
+  .dark .card {
+    border-color: var(--color-dark);
+    background-color: var(--color-dark);
+  }
+
   .card:hover {
     border-color: var(--color-primary);
   }
