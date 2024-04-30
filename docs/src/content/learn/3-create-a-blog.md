@@ -29,10 +29,12 @@ Finally, create a new file in `/src/content/blog/` (change `blog` by your collec
 
 ```md
 ---
-title: "My first blog post"
+title: "Hello world!"
+date: 2024-04-30
+abstract: "This is an example of a blog post."
 ---
 
-Welcome to my blog! This is my first post.
+Welcome to my blog, this is my first post!
 ```
 
 Run `npm run dev` and go to `http://localhost:4321/blog/my-first-blog-post` to see your blog post.
