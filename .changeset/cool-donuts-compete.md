@@ -2,4 +2,4 @@
 "@goulvenclech/astropi": minor
 ---
 
-add date and abstract to blogs
+Now blog entries **must have** `date` and `abstract` fields in their frontmatter. Also, change the blog layout and blog cards to display the `date` and `abstract` fields nicely.
