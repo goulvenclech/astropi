@@ -1,6 +1,6 @@
 ---
-title: "Alpha 0.1 - Hello World 👋"
-date: 2023-03-31
+title: "Alpha 0.1: Hello World 👋"
+date: 2024-03-31
 abstract: "Astropi is an Astro Integration that helps you build beautiful and accessible API documentation for your projects."
 ---
 

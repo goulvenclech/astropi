@@ -1,0 +1,44 @@
+---
+/**
+ * Displays a card with the date, title and abstract of a blog entry.
+ * Also a link to the blog entry.
+ */
+const { archetype, entry } = Astro.props
+---
+
+<a href={archetype?.path + "/" + entry.slug}>
+  <article class="card blog-entries-card">
+    <div class="blog-entries-header">
+      <h3 class="blog-entries-card-title">{entry.data.title}</h3>
+      <p>
+        {
+          entry.data.date.toLocaleString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        }
+      </p>
+    </div>
+    <p>{entry.data.abstract}</p>
+  </article>
+</a>
+<style>
+  .blog-entries-card p,
+  .blog-entries-card h3 {
+    text-decoration-line: none;
+    margin: 0;
+  }
+
+  .blog-entries-card {
+    padding: 1rem;
+  }
+
+  .blog-entries-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .blog-entries-card-title {
+  }
+</style>
