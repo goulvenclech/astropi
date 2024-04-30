@@ -7,6 +7,7 @@ import { userConfig } from "virtual:astropi-user-config"
 
 /**
  * For a given collection type, get all the collection entries.
+ * In production, only published entries are returned.
  * @param type - An Astropi collection type, see "collections-schemas.ts"
  */
 export async function getCollectionTypeEntries(type: string) {
@@ -23,6 +24,13 @@ export async function getCollectionTypeEntries(type: string) {
   const allBlogContentEntries = allAstropiCollectionsEntries
     .flat()
     .filter((entry) => entry.data.type === type)
+    // In production, only return published entries
+    .filter((entry) => {
+      if (import.meta.env.PROD) {
+        return entry.data.status === "published"
+      }
+      return true
+    })
   // Finnaly, return the params and props for each entry
   return allBlogContentEntries.map((entry) => ({
     params: { slug: entry.slug },
