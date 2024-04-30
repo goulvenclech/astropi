@@ -31,7 +31,7 @@ export async function getCollectionTypeEntries(type: string) {
 }
 
 /**
- * For a given collection, get all the collection entries
+ * For a given collection, get all the published collection entries.
  * @param collection - The collection to get the entries from
  */
 export async function getCollectionEntries(collection: string) {
@@ -44,9 +44,11 @@ export async function getCollectionEntries(collection: string) {
       return collection
     })
   )
-  // Filter the collections for a given collection
+  // Filter the published entries for a given collection
   const allBlogContentEntries = allAstropiCollectionsEntries
     .flat()
     .filter((entry) => entry.collection === collection)
+    .filter((entry) => entry.data.status === "published")
+
   return allBlogContentEntries
 }

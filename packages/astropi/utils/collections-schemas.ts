@@ -14,6 +14,7 @@ export const blogContentCollection = {
     title: z.string(),
     abstract: z.string(),
     date: z.date(),
+    status: z.enum(["published", "draft"]).default("published"),
   }),
 }
 
