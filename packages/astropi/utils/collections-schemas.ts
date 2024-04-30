@@ -26,6 +26,7 @@ export const docsContentCollection = {
   schema: z.object({
     type: z.literal("docs-content").default("docs-content"),
     title: z.string(),
+    status: z.enum(["published", "draft"]).default("published"),
   }),
 }
 
@@ -37,5 +38,6 @@ export const docsOpenApiCollection = {
   schema: z.object({
     type: z.literal("docs-openapi").default("docs-openapi"),
     title: z.string(),
+    status: z.enum(["published", "draft"]).default("published"),
   }),
 }
