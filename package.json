@@ -5,14 +5,18 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "version": "pnpm changeset version && pnpm i --no-frozen-lockfile"
+    "version": "pnpm changeset version && pnpm i --no-frozen-lockfile",
+    "test": "vitest --ui  --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@8.11.0",
   "devDependencies": {
-    "astro": "^4.8.1"
+    "@vitest/coverage-istanbul": "^1.5.3",
+    "@vitest/ui": "^1.5.3",
+    "astro": "^4.8.1",
+    "vitest": "^1.5.3"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1",
