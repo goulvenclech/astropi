@@ -39,3 +39,5 @@ Welcome to my blog, this is my first post!
 
 Run `npm run dev` and go to `http://localhost:4321/blog/my-first-blog-post` to see your blog post.
 
+If you want to hide your blog post in production, add a `status: "draft"` field in the frontmatter. In development mode, you will still be able to access your draft through the URL, but it won't be displayed in the UI.
+
