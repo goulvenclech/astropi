@@ -37,7 +37,7 @@ importers:
   starter:
     dependencies:
       '@goulvenclech/astropi':
-        specifier: ^0.1.2
+        specifier: ^0.2.0
         version: link:../packages/astropi
       astro:
         specifier: ^4.7.0
