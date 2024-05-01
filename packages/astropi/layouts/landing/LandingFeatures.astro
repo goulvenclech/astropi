@@ -1,38 +1,54 @@
 ---
+import InfoBanner from "../../components/InfoBanner.astro"
 /**
- * WIP
+ * Display a grid of features in the landing page.
  */
 ---
 
-<section class="my-18">
-  <h2 class="text-xl font-bold">Features</h2>
+<section>
+  <h2>Why Astropi?</h2>
+  <InfoBanner />
   <div class="landing-features-grid">
-    <article class="card">
-      <h3 class="font-semibold">Beautiful and accesible</h3>
-      <p>
-        We provide a beautiful and accesible design for your API documentation.
-      </p>
-    </article>
-    <article class="card card-alt">
-      <h3 class="font-semibold">Powered by Astro</h3>
-      <p>
-        Astro is a modern static site generator that help us to build fast and
-        modern websites.
-      </p>
-    </article>
-    <article class="card card-alt">
-      <h3 class="font-semibold">Powered by Astro</h3>
-      <p>
-        Astro is a modern static site generator that help us to build fast and
-        modern websites.
-      </p>
-    </article>
-    <article class="card">
-      <h3 class="font-semibold">Beautiful and accesible</h3>
-      <p>
-        We provide a beautiful and accesible design for your API documentation.
-      </p>
-    </article>
+    <a href="/">
+      <article class="card landing-features-card">
+        <h3>Beautiful and accesible</h3>
+        <p>
+          With accesible navigation, search bar, internationalization, SEO,
+          easy-to-read typography, code highlighting, dark mode... Astropi let
+          you focus on your content.
+        </p>
+      </article>
+    </a>
+    <a href="/">
+      <article class="card landing-features-card">
+        <h3>More with less</h3>
+        <p>
+          With minimal configuration, add a blog or an API playground to your
+          documentation. Our pre-built Archetypes and components can grow with
+          your project.
+        </p>
+      </article>
+    </a>
+    <a href="/">
+      <article class="card landing-features-card">
+        <h3>Powered by Astro</h3>
+        <p>
+          Astro is a modern static site generator that help us to build fast and
+          modern websites. Extend Astropi with your favorite Astro components,
+          integrations and libraries.
+        </p>
+      </article>
+    </a>
+    <a href="/">
+      <article class="card landing-features-card">
+        <h3>Framework-agnostic</h3>
+        <p>
+          Thanks to Astro, you can bring your favorite components from React,
+          Vue, Svelte, Solid, and more. And write your content in Markdown,
+          Markdoc, or MDX.
+        </p>
+      </article>
+    </a>
   </div>
 
   <style is:global>
@@ -43,12 +59,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.75rem;
       }
-    }
-    article {
-      @apply p-3 border border-neutral-500 rounded;
-    }
-    article:hover {
-      @apply border-rose-600;
+
+      .landing-features-card {
+        padding: 1rem;
+      }
     }
   </style>
 </section>

@@ -9,7 +9,7 @@ const { archetype, entry } = Astro.props
 <a href={archetype?.path + "/" + entry.slug}>
   <article class="card blog-entries-card">
     <div class="blog-entries-header">
-      <h3 class="blog-entries-card-title">{entry.data.title}</h3>
+      <h3>{entry.data.title}</h3>
       <p>
         {
           entry.data.date.toLocaleString("en-GB", {
@@ -24,12 +24,6 @@ const { archetype, entry } = Astro.props
   </article>
 </a>
 <style>
-  .blog-entries-card p,
-  .blog-entries-card h3 {
-    text-decoration-line: none;
-    margin: 0;
-  }
-
   .blog-entries-card {
     padding: 1rem;
   }
@@ -37,8 +31,5 @@ const { archetype, entry } = Astro.props
   .blog-entries-header {
     display: flex;
     justify-content: space-between;
-  }
-
-  .blog-entries-card-title {
   }
 </style>
