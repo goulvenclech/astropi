@@ -55,10 +55,11 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
-    margin-top: 1.5rem;
+    margin: 3rem 0 1rem;
   }
   p {
-    margin: 0.75rem 0;
+    font-size: 1rem;
+    margin: 1rem 0;
   }
   /**
     * BUTTONS
@@ -200,4 +201,25 @@
     display: inline-block;
   }
   */
+
+  /**
+    * CODE
+    */
+  .astro-code {
+    font-family: monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  p code {
+    font-family: monospace;
+    font-size: 0.9rem;
+    background-color: var(--color-lighter);
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.5rem;
+  }
+
+  .dark p code {
+    background-color: var(--color-dark);
+  }
 }
