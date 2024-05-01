@@ -21,6 +21,8 @@ your_project/
 ```bash
 # Start the development server
 npm run dev
+# Build the project
+npm run build
 ```
 
 
