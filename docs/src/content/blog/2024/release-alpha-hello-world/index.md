@@ -29,7 +29,11 @@ This way, the user has a very clean project structure, with most boilerplate cod
 
 If this first alpha version works fine in development mode, there is a breaking bug in production.
 
-During build, Astro merges routes that use the same component, preventing us to create multiple collections from the same archetype. I have documented this in a [GitHub issue](https://github.com/withastro/astro/issues/10622) and am currently working on [a fix](https://github.com/withastro/astro/pull/10625). Stay tuned for the next release!
+To generate multiple documentations or blogs with just a few lines of configuration, we have created `archetypes` that include a basic schema and layout. For instance, if you set up in your configuration two blogs named "news" and "releases", each with two entries, our Astro integration will inject two blog indexes and four article pages into the build process.
+
+If this works seamlessly in development, there is a bug in Astro's build process that merges all routes sharing the same layout (for instance, the two indexes in our example) causing 404 errors. I have documented this in a [GitHub issue](https://github.com/withastro/astro/issues/10622) and I'm working on [a fix](https://github.com/withastro/astro/pull/10625).
+
+Stay tuned for the next release!
 
 ## Current features
 

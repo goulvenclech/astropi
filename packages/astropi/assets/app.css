@@ -57,6 +57,10 @@
     line-height: 1;
     margin: 3rem 0 1rem;
   }
+  h3 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
   p {
     font-size: 1rem;
     margin: 1rem 0;
