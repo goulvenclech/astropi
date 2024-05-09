@@ -1,4 +1,4 @@
-import { expect, test } from "vitest"
+import { describe, expect, it } from "vitest"
 import { vi } from "vitest"
 import { getCurrentArchetype } from "./archetypes"
 
@@ -29,13 +29,15 @@ vi.mock("virtual:astropi-user-config", () => {
   return { userConfig }
 })
 
-test("Should return the current Archetype for a given URL location", () => {
-  const location = new URL("https://astro.build/blog")
-  const archetype = getCurrentArchetype(location)
-  expect(archetype).toEqual({
-    name: "Blog",
-    path: "blog",
-    collection: "blog",
-    type: "blog-content",
+describe("getCurrentArchetype", () => {
+  it("should return the current archetype based on the URL location", () => {
+    const location = new URL("https://astro.build/blog")
+    const archetype = getCurrentArchetype(location)
+    expect(archetype).toEqual({
+      name: "Blog",
+      path: "blog",
+      collection: "blog",
+      type: "blog-content",
+    })
   })
 })
