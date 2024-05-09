@@ -8,4 +8,14 @@ export default defineConfig({
       exclude: ["**/*.config.*", "**/config.*", "**/*.workspace.*"],
     },
   },
+  plugins: [
+    {
+      name: "astropi-user-config",
+      resolveId(id: any) {
+        if (id === "virtual:astropi-user-config") {
+          return "\0virtual:astropi-user-config"
+        }
+      },
+    },
+  ],
 })

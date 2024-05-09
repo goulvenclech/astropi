@@ -1,9 +1,41 @@
 import { expect, test } from "vitest"
+import { vi } from "vitest"
+import { getCurrentArchetype } from "./archetypes"
 
-function sum(a: number, b: number) {
-  return a + b
-}
+vi.mock("virtual:astropi-user-config", () => {
+  const userConfig = {
+    projectName: "Astropi Project",
+    archetypes: [
+      {
+        name: "Blog",
+        path: "blog",
+        collection: "blog",
+        type: "blog-content",
+      },
+      {
+        name: "Changelog",
+        path: "changelog",
+        collection: "changelog",
+        type: "blog-content",
+      },
+      {
+        name: "Docs",
+        path: "docs",
+        collection: "docs",
+        type: "docs-content",
+      },
+    ],
+  }
+  return { userConfig }
+})
 
-test("adds 1 + 2 to equal 3", () => {
-  expect(sum(1, 2)).toBe(3)
+test("Should return the current Archetype for a given URL location", () => {
+  const location = new URL("https://astro.build/blog")
+  const archetype = getCurrentArchetype(location)
+  expect(archetype).toEqual({
+    name: "Blog",
+    path: "blog",
+    collection: "blog",
+    type: "blog-content",
+  })
 })
