@@ -44,8 +44,6 @@ function getEntryPoint(archetype: Archetype): string {
       return "@goulvenclech/astropi/pages/docs-content.astro"
     case "docs-openapi":
       return "@goulvenclech/astropi/pages/docs-openapi.astro"
-    default:
-      return "@goulvenclech/astropi/pages/index.astro"
   }
 }
 
@@ -61,7 +59,5 @@ function getDynamicEntryPoint(archetype: Archetype): string {
       return "@goulvenclech/astropi/pages/[...docs-content].astro"
     case "docs-openapi":
       return "@goulvenclech/astropi/pages/[...docs-openapi].astro"
-    default:
-      return "@goulvenclech/astropi/pages/index.astro"
   }
 }

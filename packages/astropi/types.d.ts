@@ -9,7 +9,7 @@ interface AstropiUserConfig {
 type Archetype = {
   name: string
   path: string
-  collection: any
+  collection: string
   type: "blog-content" | "docs-content" | "docs-openapi"
 }
 // Used by "./virtual-user-config.ts"
