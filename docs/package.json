@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@goulvenclech/astropi": "workspace:*",
-    "astro": "^4.0.0"
+    "astro": "^4.8.0"
   },
   "devDependencies": {}
 }
