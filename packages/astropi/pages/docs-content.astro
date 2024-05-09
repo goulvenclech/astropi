@@ -10,7 +10,7 @@ const archetype = getCurrentArchetype(Astro.url)
 const allDocsEntries = await getCollectionEntries(archetype?.collection)
 ---
 
-<Layout title="Welcome">
+<Layout title={archetype?.name || ""} description={archetype?.name || ""}>
   <main>
     <section>
       <h1>{archetype?.name}</h1>

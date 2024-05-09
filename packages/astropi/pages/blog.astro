@@ -11,7 +11,10 @@ const archetype = getCurrentArchetype(Astro.url)
 const allBlogEntries = await getCollectionEntries(archetype?.collection)
 ---
 
-<Layout title="Welcome">
+<Layout
+  title={archetype?.name || ""}
+  description={`${archetype?.name} latest entries`}
+>
   <main>
     <section>
       <h1>{archetype?.name}</h1>

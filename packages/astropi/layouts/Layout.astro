@@ -8,12 +8,13 @@ import Footer from "./Footer.astro"
  */
 interface Props {
   title: string
+  description: string
 }
 
-const { title } = Astro.props
+const { title, description } = Astro.props
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   <Header />
   <slot />
   <Footer />
