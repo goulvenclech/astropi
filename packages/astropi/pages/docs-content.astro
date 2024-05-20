@@ -7,7 +7,7 @@ import { getCollectionEntries } from "../utils/collections-entries"
  */
 const archetype = getCurrentArchetype(Astro.url)
 
-const allDocsEntries = await getCollectionEntries(archetype?.collection)
+const allDocsEntries = await getCollectionEntries(archetype.collection)
 ---
 
 <Layout title={archetype?.name || ""} description={archetype?.name || ""}>

@@ -1,5 +1,5 @@
 ---
-title: "Minimal configuration"
+title: "Run the project"
 ---
 
 First, create a collection with the Blog Content zod shema. In `/src/content/config.ts` :

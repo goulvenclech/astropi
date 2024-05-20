@@ -1,5 +1,5 @@
 ---
-title: "Installation"
+title: "Launch a new project"
 ---
 
 Welcome to Astropi 🪐

@@ -1,5 +1,5 @@
 ---
-title: "Getting started"
+title: "Add to an existing project"
 ---
 
 ## Starter structure

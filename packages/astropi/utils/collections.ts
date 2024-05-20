@@ -1,5 +1,4 @@
 /**
- * COLLECTIONS UTILS
  * This module contains functions for generating collections based on the user's configuration.
  * Also exports default collections Zod schemas.
  */

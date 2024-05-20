@@ -24,7 +24,7 @@ const isCurrentPage = (path: string) => {
     archetypes.map((archetype) => (
       <HeaderNavLink
         url={`/${archetype.path}`}
-        is_current={isCurrentPage(archetype.path)}
+        isCurrent={isCurrentPage(archetype.path)}
       >
         {archetype.name}
       </HeaderNavLink>
