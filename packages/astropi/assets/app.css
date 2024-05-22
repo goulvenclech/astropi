@@ -76,20 +76,26 @@
     gap: 0.25rem;
     align-items: center;
     border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid transparent;
   }
 
   .button:hover {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    opacity: 0.8;
+  }
+
+  .button-alt {
+    background-color: var(--color-lighter);
+    color: var(--color-darker);
   }
 
   .button-alt:hover {
-    color: var(--color-secondary);
-    border-color: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
   }
   /**
     * CARDS

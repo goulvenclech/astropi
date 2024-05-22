@@ -2,36 +2,40 @@
 title: "Content blog"
 ---
 
+First, create a collection with the Blog Content zod shema. In `/src/content/config.ts` :
 
+```ts
+import { blogContentCollection } from "@goulvenclech/astropi"
 
-**Getting started**
+export const collections = {
+  blog: blogContentCollection,
+}
+```
 
-- Create a new project
-- Add to an project
-- Minimal configuration
-- Writing content
-- Run the project
+Then, create an Astropi archetype based on this collection. In `docs/astro.config.mjs` , add an object to the `archetypes` array, like this one:
 
-**Archetypes**
+```ts
+  archetypes: [
+    {
+      path: "blog", // Dsed in the URL
+      name: "Blog", // Displayed in the UI
+      collection: "blog", // The collection name (see above)
+      type: "blog-content", // Don't change this
+    },
+  ],
+```
 
-- Content blog
-- Content documentation
-- OpenAPI documentation
+Finally, create a new file in `/src/content/blog/` (change `blog` by your collection name) with the following content:
 
-**Customization**
+```md
+---
+title: "Hello world!"
+date: 2024-04-30
+abstract: "This is an example of a blog post."
+---
 
-- Project configuration
-- Logo and favicon
-- Landing page
-- CSS variables
-- Overriding CSS
-- Overriding components
-- Importing components
+Welcome to my blog, this is my first post!
+```
 
-**Guides**
+If you want to hide your blog post in production, add a `status: "draft"` field in the frontmatter. In development mode, you will still be able to access your draft through the URL, but it won't be displayed in the UI.
 
-- Versioning
-- Internationalization
-- MDX and Markdoc
-- Expressive code
-- Tailwind CSS

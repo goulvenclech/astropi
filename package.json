@@ -11,7 +11,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@8.11.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=8"
+  },
   "devDependencies": {
     "@vitest/coverage-istanbul": "^1.5.3",
     "@vitest/ui": "^1.5.3",
