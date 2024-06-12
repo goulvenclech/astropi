@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import SidebarNavigation from "../components/SidebarNavigation.astro"
+import PageNavigation from "../components/PageNavigation.astro"
 import { getCurrentArchetype } from "../utils/archetypes"
 import { getCollectionEntries } from "../utils/collections-entries"
 /**
@@ -27,6 +28,7 @@ const allDocsEntries = await getCollectionEntries(archetype.collection)
       }
     </section>
   </main>
+  <PageNavigation />
 </Layout>
 <style>
   main {

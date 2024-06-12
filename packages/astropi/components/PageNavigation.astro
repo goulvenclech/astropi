@@ -2,7 +2,6 @@
 import {} from "../utils/collections-entries"
 import { getCurrentArchetype } from "../utils/archetypes"
 import { getCollectionEntries } from "../utils/collections-entries"
-import { generateCollectionNavigation } from "../utils/navigation"
 import HeaderNavLink from "./header/HeaderNavLink.astro"
 /**
  * Sidebar navigation, used to navigate between pages in the same collection.
@@ -13,28 +12,21 @@ const archetype = getCurrentArchetype(Astro.url)
 const allEntries = await getCollectionEntries(archetype.collection)
 // Check if a link is the current page, used to apply the active class
 const isCurrentPage = (path: string) => {
-  const currentPage = Astro.url.pathname.split("/").pop()
-  const pathPage = path.split("/").pop()
-  return pathPage === currentPage
+  const currentPage = Astro.url.pathname.split("/")[2]
+  return currentPage === path
 }
-
-const collectionNavigation = generateCollectionNavigation(allEntries)
 ---
 
 <aside class="sidebar">
+  <h3>In this page</h3>
   {
-    Object.entries(collectionNavigation).map(([category, entries]) => (
-      <div class="category">
-        {category && <h3>{category}</h3>}
-        {entries.map((doc) => (
-          <HeaderNavLink
-            url={`/${archetype.path}/${doc.slug}`}
-            isCurrent={isCurrentPage(doc.slug)}
-          >
-            {doc.data.title}
-          </HeaderNavLink>
-        ))}
-      </div>
+    allEntries.map((doc) => (
+      <HeaderNavLink
+        url={`/${archetype.path}/${doc.slug}`}
+        isCurrent={isCurrentPage(doc.slug)}
+      >
+        {doc.data.title}
+      </HeaderNavLink>
     ))
   }
 </aside>
@@ -65,8 +57,5 @@ const collectionNavigation = generateCollectionNavigation(allEntries)
     font-size: 0.9rem;
     margin-left: 0.5rem;
     margin-bottom: 0.25rem;
-  }
-  .sidebar .category {
-    margin-bottom: 1rem;
   }
 </style>

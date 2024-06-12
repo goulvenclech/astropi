@@ -1,4 +1,5 @@
 ---
+slug: "advanced/writing-content"
 title: "Writing content"
 ---
 

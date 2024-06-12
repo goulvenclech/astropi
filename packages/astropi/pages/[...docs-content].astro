@@ -3,6 +3,7 @@ import {} from "../utils/collections-entries"
 import Layout from "../layouts/Layout.astro"
 import SidebarNavigation from "../components/SidebarNavigation.astro"
 import { getCollectionTypeEntries } from "../utils/collections-entries"
+import PageNavigation from "../components/PageNavigation.astro"
 /**
  * this generate the pages inside blog's collections.
  */
@@ -24,9 +25,7 @@ const { Content } = await entry.render()
       <Content />
     </section>
   </main>
-  <aside class="sidebar">
-    <h3>On this page</h3>
-  </aside>
+  <PageNavigation />
 
   <style>
     main {
