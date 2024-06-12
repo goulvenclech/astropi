@@ -2,7 +2,11 @@
  * COLLECTIONS ENTRIES UTILS
  * This module contains functions to generate or get collections entries.
  */
-import { getCollection } from "astro:content"
+import {
+  getCollection,
+  type CollectionEntry,
+  type CollectionKey,
+} from "astro:content"
 import { userConfig } from "virtual:astropi-user-config"
 
 /**
@@ -42,7 +46,9 @@ export async function getCollectionTypeEntries(type: string) {
  * For a given collection, get all the published collection entries.
  * @param collection - The collection to get the entries from
  */
-export async function getCollectionEntries(collection: string) {
+export async function getCollectionEntries(
+  collection: string
+): Promise<Array<CollectionEntry<CollectionKey>>> {
   // Get the collection archetypes created by the user
   const { archetypes } = userConfig
   // Get every Astropi collections from the archetypes

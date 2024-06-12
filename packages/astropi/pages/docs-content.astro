@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import SidebarNavigation from "../components/SidebarNavigation.astro"
 import { getCurrentArchetype } from "../utils/archetypes"
 import { getCollectionEntries } from "../utils/collections-entries"
 /**
@@ -11,6 +12,7 @@ const allDocsEntries = await getCollectionEntries(archetype.collection)
 ---
 
 <Layout title={archetype?.name || ""} description={archetype?.name || ""}>
+  <SidebarNavigation allEntries={allDocsEntries} />
   <main>
     <section>
       <h1>{archetype?.name}</h1>
