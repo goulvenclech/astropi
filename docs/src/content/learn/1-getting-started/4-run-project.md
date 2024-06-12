@@ -1,4 +1,5 @@
 ---
+slug: "getting-started/run-project"
 title: "Run the project"
 ---
 

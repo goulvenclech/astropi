@@ -1,0 +1,4 @@
+---
+slug: "archetypes"
+title: "Archetypes"
+---

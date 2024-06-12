@@ -13,9 +13,9 @@ export const generateCollectionNavigation = (
   entries: Array<CollectionEntry<CollectionKey>>
 ): Record<string, CollectionEntry<CollectionKey>[]> => {
   // List categories (folders) in the collection
-  const categories = entries.filter(
-    (entry) => Path.parse(entry.id).name === "index"
-  )
+  const categories = entries
+    .filter((entry) => Path.parse(entry.id).name === "index")
+    .sort((a, b) => a.id.localeCompare(b.id))
   const grouped = entries.reduce(
     (acc, entry) => {
       // Get the category of the entry and use its title as the key
@@ -31,12 +31,20 @@ export const generateCollectionNavigation = (
     },
     {} as Record<string, CollectionEntry<CollectionKey>[]>
   )
-  // Sort alphabetically, but keep the no-category entries first
-  return Object.fromEntries(
-    Object.entries(grouped).sort(([a], [b]) => {
+  // Put the "" (root) category at the beginning
+  const category_sorted = Object.fromEntries(
+    Object.entries(grouped).sort(([a], [_b]) => {
       if (a === "") return -1
-      if (b === "") return 1
-      return a.localeCompare(b)
+      return 1
     })
   ) as Record<string, CollectionEntry<CollectionKey>[]>
+  // Sort the entries in each category alphabetically
+  const sorted = Object.fromEntries(
+    Object.entries(category_sorted).map(([key, value]) => [
+      key,
+      value.sort((a, b) => a.id.localeCompare(b.id)),
+    ])
+  ) as Record<string, CollectionEntry<CollectionKey>[]>
+
+  return sorted
 }

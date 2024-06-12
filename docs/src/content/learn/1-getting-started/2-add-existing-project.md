@@ -1,4 +1,5 @@
 ---
+slug: "getting-started/add-existing-project"
 title: "Add to an existing project"
 ---
 

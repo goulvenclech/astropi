@@ -18,7 +18,7 @@ const { Content } = await entry.render()
 <Layout title={entry.data.title} description={entry.data.description}>
   <SidebarNavigation />
   <main>
-    <section>
+    <section class="title-section">
       <h1>{entry.data.title}</h1>
     </section>
     <section>
@@ -30,6 +30,10 @@ const { Content } = await entry.render()
   <style>
     main {
       width: 70ch;
+    }
+    .title-section {
+      margin-top: 1.5rem;
+      margin-bottom: -2rem;
     }
   </style>
 </Layout>

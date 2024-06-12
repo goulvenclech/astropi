@@ -1,4 +1,5 @@
 ---
+slug: "getting-started/new-project"
 title: "Launch a new project"
 ---
 

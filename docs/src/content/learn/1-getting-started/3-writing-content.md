@@ -1,5 +1,5 @@
 ---
-slug: "advanced/writing-content"
+slug: "getting-started/writing-content"
 title: "Writing content"
 ---
 
