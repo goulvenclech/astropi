@@ -2,16 +2,12 @@
 /**
  * An internal link, displayed in the Header navigation.
  * @param {string} url - The URL to link to.
- * @param {boolean} is_current - Whether the link is the current page.
+ * @param {boolean} isCurrent - Whether the link is the current page.
  */
-const { url, is_current = false } = Astro.props
+const { url, isCurrent = false } = Astro.props
 ---
 
-<a
-  class="header-nav-link"
-  href={url}
-  aria-current={is_current ? "page" : false}
->
+<a class="header-nav-link" href={url} aria-current={isCurrent ? "page" : false}>
   <slot />
 </a>
 <style is:global>
@@ -26,17 +22,18 @@ const { url, is_current = false } = Astro.props
       text-decoration-line: none;
     }
     a.header-nav-link:hover {
-      border-color: var(--color-neutral);
+      background-color: var(--color-lighter);
+    }
+    .dark a.header-nav-link:hover {
+      background-color: var(--color-dark);
     }
     a.header-nav-link:active {
       color: var(--color-primary);
       border-color: var(--color-primary);
     }
     a.header-nav-link[aria-current="page"] {
-      background-color: var(--color-lighter);
-    }
-    .dark a.header-nav-link[aria-current="page"] {
-      background-color: var(--color-dark);
+      color: var(--color-primary);
+      background-color: var(--color-primary-light);
     }
   }
 </style>

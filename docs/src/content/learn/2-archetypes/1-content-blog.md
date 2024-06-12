@@ -1,8 +1,13 @@
 ---
-title: "Create a blog"
+slug: "archetypes/content-blog"
+title: "Content blog"
 ---
 
-First, create a collection with the Blog Content zod shema. In `/src/content/config.ts` :
+A content blog is a collection based on markdown files that are displayed in the UI as a blog. This archetype is perfect for creating a blog for your project.
+
+## How to create a content blog
+
+First, create a collection with the Blog Content zod shema. In `/src/content/config.ts`:
 
 ```ts
 import { blogContentCollection } from "@goulvenclech/astropi"
@@ -17,7 +22,7 @@ Then, create an Astropi archetype based on this collection. In `docs/astro.confi
 ```ts
   archetypes: [
     {
-      path: "blog", // Dsed in the URL
+      path: "blog", // Used in the URL
       name: "Blog", // Displayed in the UI
       collection: "blog", // The collection name (see above)
       type: "blog-content", // Don't change this
@@ -37,7 +42,4 @@ abstract: "This is an example of a blog post."
 Welcome to my blog, this is my first post!
 ```
 
-Run `npm run dev` and go to `http://localhost:4321/blog/my-first-blog-post` to see your blog post.
-
 If you want to hide your blog post in production, add a `status: "draft"` field in the frontmatter. In development mode, you will still be able to access your draft through the URL, but it won't be displayed in the UI.
-

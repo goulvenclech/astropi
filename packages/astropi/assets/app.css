@@ -9,8 +9,8 @@
       */
     --color-primary: #f43f5e;
     --color-primary-dark: #9f1239;
+    --color-primary-light: #f43f5e14;
     --color-secondary: #14b8a6;
-    --color-secondary-dark: #115e59;
     --color-white: #ffffff;
     --color-lighter: #f4f4f5;
     --color-light: #d4d4d8;
@@ -34,6 +34,7 @@
     * MAIN
     */
   main {
+    width: 70ch;
     padding: 0 1.5rem;
     margin: 0 auto;
   }
@@ -41,7 +42,7 @@
     * SECTION
     */
   section {
-    margin: 5rem 0;
+    margin: 3rem 0;
   }
   /**
     * TYPOGRAPHY
@@ -55,7 +56,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
-    margin: 3rem 0 1rem;
+    margin: 3rem 0 1.5rem;
   }
   h3 {
     font-weight: 700;
@@ -63,7 +64,8 @@
   }
   p {
     font-size: 1rem;
-    margin: 1rem 0;
+    line-height: 1.5;
+    margin: 1.5rem 0;
   }
   /**
     * BUTTONS
@@ -74,20 +76,26 @@
     gap: 0.25rem;
     align-items: center;
     border-radius: 0.5rem;
-    border: 1px solid var(--color-neutral);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid transparent;
   }
 
   .button:hover {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    opacity: 0.8;
+  }
+
+  .button-alt {
+    background-color: var(--color-lighter);
+    color: var(--color-darker);
   }
 
   .button-alt:hover {
-    color: var(--color-secondary);
-    border-color: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
   }
   /**
     * CARDS

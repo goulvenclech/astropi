@@ -1,0 +1,72 @@
+---
+import {} from "../utils/collections-entries"
+import { getCurrentArchetype } from "../utils/archetypes"
+import { getCollectionEntries } from "../utils/collections-entries"
+import { generateCollectionNavigation } from "../utils/navigation"
+import HeaderNavLink from "./header/HeaderNavLink.astro"
+/**
+ * Sidebar navigation, used to navigate between pages in the same collection.
+ * Pages are fetched from the collection specified in the archetype, and grouped
+ * by categories (folders in the collection, if any).
+ */
+const archetype = getCurrentArchetype(Astro.url)
+const allEntries = await getCollectionEntries(archetype.collection)
+// Check if a link is the current page, used to apply the active class
+const isCurrentPage = (path: string) => {
+  const currentPage = Astro.url.pathname.split("/").pop()
+  const pathPage = path.split("/").pop()
+  return pathPage === currentPage
+}
+
+const collectionNavigation = generateCollectionNavigation(allEntries)
+---
+
+<aside class="sidebar">
+  {
+    Object.entries(collectionNavigation).map(([category, entries]) => (
+      <div class="category">
+        {category && <h3>{category}</h3>}
+        {entries.map((doc) => (
+          <HeaderNavLink
+            url={`/${archetype.path}/${doc.slug}`}
+            isCurrent={isCurrentPage(doc.slug)}
+          >
+            {doc.data.title}
+          </HeaderNavLink>
+        ))}
+      </div>
+    ))
+  }
+</aside>
+<style>
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    width: 250px;
+    font-size: 0.9rem;
+  }
+  .sidebar a {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    gap: 0.25rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    text-decoration-line: none;
+  }
+  .sidebar a:hover {
+    background-color: var(--color-lighter);
+  }
+  .sidebar a:active {
+    color: var(--color-primary);
+  }
+  .sidebar h3 {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .sidebar .category {
+    margin-bottom: 1rem;
+  }
+</style>
