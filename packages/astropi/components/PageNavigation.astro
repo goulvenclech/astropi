@@ -1,61 +1,115 @@
 ---
-import {} from "../utils/collections-entries"
-import { getCurrentArchetype } from "../utils/archetypes"
-import { getCollectionEntries } from "../utils/collections-entries"
-import HeaderNavLink from "./header/HeaderNavLink.astro"
+import type { MarkdownHeading } from "astro"
 /**
- * Sidebar navigation, used to navigate between pages in the same collection.
- * Pages are fetched from the collection specified in the archetype, and grouped
- * by categories (folders in the collection, if any).
+ * Sticky sidebar navigation, used to display the headings of the current page.
+ * The sidebar will highlight the current heading when scrolling.
+ * @prop headings - Array of headings to display in the sidebar.
  */
-const archetype = getCurrentArchetype(Astro.url)
-const allEntries = await getCollectionEntries(archetype.collection)
-// Check if a link is the current page, used to apply the active class
-const isCurrentPage = (path: string) => {
-  const currentPage = Astro.url.pathname.split("/")[2]
-  return currentPage === path
+interface Props {
+  headings: Array<MarkdownHeading>
 }
+
+const { headings } = Astro.props
 ---
 
-<aside class="sidebar">
-  <h3>In this page</h3>
-  {
-    allEntries.map((doc) => (
-      <HeaderNavLink
-        url={`/${archetype.path}/${doc.slug}`}
-        isCurrent={isCurrentPage(doc.slug)}
-      >
-        {doc.data.title}
-      </HeaderNavLink>
-    ))
-  }
+<aside>
+  <div class="page-navigation">
+    {headings.length !== 0 && <h3>In this page</h3>}
+    <ul>
+      {
+        headings.map((heading) => (
+          <li>
+            <a href={`#${heading.slug}`} class={`depth-${heading.depth}`}>
+              {heading.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </aside>
 <style>
-  .sidebar {
+  .page-navigation {
+    position: sticky;
+    top: 1rem;
     display: flex;
     flex-direction: column;
     margin: 1.5rem;
     width: 250px;
     font-size: 0.9rem;
   }
-  .sidebar a {
+  .page-navigation a {
     display: flex;
     padding: 0.25rem 0.5rem;
     gap: 0.25rem;
     align-items: center;
     border-radius: 0.5rem;
+    white-space: wrap;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     border: 1px solid transparent;
     text-decoration-line: none;
   }
-  .sidebar a:hover {
-    background-color: var(--color-lighter);
-  }
-  .sidebar a:active {
-    color: var(--color-primary);
-  }
-  .sidebar h3 {
+  .page-navigation h3 {
     font-size: 0.9rem;
     margin-left: 0.5rem;
     margin-bottom: 0.25rem;
   }
+  .depth-3 {
+    margin-left: 1rem;
+  }
+  .depth-4 {
+    margin-left: 2rem;
+  }
 </style>
+<script>
+  /**
+   * This script is used to highlight the current heading in the sidebar when scrolling.
+   */
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all the headings in the page and sort them by their offsetTop
+    const headings = Array.from(
+      document.querySelectorAll("main h2, main h3") as NodeListOf<HTMLElement>
+    )
+    headings.sort((a, b) => a.offsetTop - b.offsetTop)
+    // Get all the links in the sidebar
+    const navLinks = document.querySelectorAll(".page-navigation a")
+    // Used at every scroll event to remove active classes
+    function removeActiveClasses() {
+      navLinks.forEach((link) => link.classList.remove("active"))
+    }
+    // Used at every scroll event to add active class to the current heading
+    function addActiveClass(id: string) {
+      const link = document.querySelector(`a[href="#${id}"]`)
+      if (link) {
+        link.classList.add("active")
+      }
+    }
+    // At every scroll event, check the current heading and add the active class
+    function handleScroll() {
+      let currentSection = "" as string | null
+      // Opinionated: consider the heading active when its top is at a fraction of the viewport
+      const currentScroll = window.scrollY + window.innerHeight / 5
+      // Get the current heading by checking its offsetTop and the next heading's offsetTop
+      headings.forEach((heading, index) => {
+        if (
+          heading.offsetTop <= currentScroll &&
+          (headings[index + 1] == undefined ||
+            headings[index + 1].offsetTop > currentScroll)
+        ) {
+          currentSection = heading.id
+        }
+      })
+
+      removeActiveClasses()
+      if (currentSection) {
+        addActiveClass(currentSection)
+      }
+    }
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll)
+  })
+</script>

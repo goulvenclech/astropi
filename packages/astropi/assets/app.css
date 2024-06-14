@@ -136,7 +136,8 @@
     text-decoration: none;
   }
 
-  p a {
+  p a,
+  li a {
     /* decoration has a fixed value, so it doesn't change with the font size */
     text-decoration-thickness: 0.1rem;
     text-underline-offset: 3px;
@@ -145,12 +146,16 @@
     white-space: nowrap;
   }
 
-  p a:hover {
+  p a:hover,
+  li a:hover,
+  li a.active {
     color: var(--color-primary);
   }
 
   p a:active,
-  p a:focus {
+  p a:focus,
+  li a:active,
+  li a:focus {
     color: var(--color-primary-dark);
   }
 

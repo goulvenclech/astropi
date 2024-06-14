@@ -19,7 +19,9 @@ abstract: "This is an example of a blog post."
 ---
 ```
 
-## Headers
+## Typography
+
+### Headers
 
 Note that the level 1 title is automatically added to the page title and the navigation.
 
@@ -28,7 +30,7 @@ Note that the level 1 title is automatically added to the page title and the nav
 ### Level 3 title
 ```
 
-## Text
+### Text
 
 ```md
 This is a paragraph.
@@ -36,14 +38,14 @@ This is a paragraph.
 This is another paragraph.
 ```
 
-## Emphasis
+### Emphasis
 
 ```md
 *italic*
 **bold**
 ```
 
-## Lists
+### Lists
 
 ```md
 - Item 1
@@ -52,25 +54,33 @@ This is another paragraph.
   - Subitem 2
 ```
 
-## Links
+### Links
 
 ```md
 [Link text](https://example.com)
 ```
 
-## Images
+### Horizontal rule
+
+```md
+---
+```
+
+## Blocks
+
+### Images
 
 ```md
 ![Alt text](https://example.com/image.jpg)
 ```
 
-## Code
+### Code
 
 ```md
 `inline code`
 ```
 
-## Code block
+### Code block
 
 ```md
 \`\`\`ts
@@ -78,26 +88,13 @@ const example = "code block";
 \`\`\`
 ```
 
-## Blockquote
+### Blockquote
 
 ```md
 > This is a blockquote.
 ```
 
-## Horizontal rule
-
-```md
----
-```
-
-## Line break
-
-```md
-This is a line
-This is a line break.
-```
-
-## Tables
+### Tables
 
 ```md
 | Header 1 | Header 2 |
