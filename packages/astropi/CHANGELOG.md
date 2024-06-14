@@ -1,5 +1,19 @@
 # astropi
 
+## 0.3.0
+
+### Minor Changes
+
+- b5fe4e3: Fixed an issue in Astro where pages sharing the same archetypes were incorrectly merged during production. I submitted a patch that has been incorporated into Astro 4.8.0.
+- 9b1c52e: Adds a sidebar navigation for the current page headings.
+- b3e3c5d: Adds SidebarNavigation component and function to generate a collection navigation.
+- eb0edff: Add title and description meta tags where it was possible.
+
+### Patch Changes
+
+- b5be9dc: Add tests for collections and archetypes public functions.
+- 1489b5d: Fixes active link on sidebar navigation.
+
 ## 0.2.0
 
 ### Minor Changes
