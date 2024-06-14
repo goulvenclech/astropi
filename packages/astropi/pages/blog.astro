@@ -21,9 +21,9 @@ const allBlogEntries = await getCollectionEntries(archetype?.collection)
     </section>
     <section class="blog-entries">
       {
-        allBlogEntries.map((entry) => (
-          <BlogEntryCard entry={entry} archetype={archetype} />
-        ))
+        allBlogEntries
+          .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+          .map((entry) => <BlogEntryCard entry={entry} archetype={archetype} />)
       }
     </section>
   </main>
