@@ -13,7 +13,11 @@ const archetype = getCurrentArchetype(Astro.url)
 const allEntries = await getCollectionEntries(archetype.collection)
 // Check if a link is the current page, used to apply the active class
 const isCurrentPage = (path: string) => {
-  const currentPage = Astro.url.pathname.split("/").pop()
+  const currentPage = Astro.url.pathname
+    .split("/")
+    // In production the pathname ends with a slash, so let's remove empty strings
+    .filter((s) => s)
+    .pop()
   const pathPage = path.split("/").pop()
   return pathPage === currentPage
 }
