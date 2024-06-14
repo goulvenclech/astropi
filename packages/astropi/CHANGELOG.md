@@ -1,5 +1,11 @@
 # astropi
 
+## 0.3.1
+
+### Patch Changes
+
+- e4a7fe7: Fixes blog entries sorting.
+
 ## 0.3.0
 
 ### Minor Changes
