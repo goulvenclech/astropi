@@ -8,11 +8,11 @@ abstract: "Small release to improve the blog archetype and layout. Also, some ne
 
 For this version, I've tried to add the essentials to the blog archetype to make it functional.
 
-From now on, blog entries must include `date` and `abstract` fields in their frontmatter. This information will be displayed on the blog index cards, as well as in the article layout. You can already see those change in this article header 😉
+From now on, blog entries must include the `date` and `abstract` fields in their frontmatter. This information will be displayed on the blog index cards, as well as in the article layout. You can already see these changes in this article header 😉
 
-Additionally, entries now have a `status` field in their frontmatter, which is set to `published` by default. If this field is changed to `draft`, the entry will not be parsed by Astro, hiding it from public view in production. However, in development, these draft entries remain accessible through their direct URLs, allowing authors to preview their work before publication.
+Additionally, entries now have a `status` field, set to `published` by default. If this field is changed to `draft`, the entry will not be parsed by Astro, hiding it from public view in production. However, in development, these draft entries remain accessible through their direct URLs, allowing authors to preview their work before publication.
 
-I chose not to use a boolean `draft` field because I believe we will soon need additional options. For example, a type of draft that appears in the UI during development, or entry to publish after a specific semantic versioning (semver).
+I chose not to use a boolean `draft` field because I believe we will soon need additional options. For example, a type of draft that appears in the UI during development, or an entry to publish after a specific semantic versioning (semver).
 
 ## About the breaking bug
 
@@ -26,7 +26,7 @@ The differing behaviors can be attributed to Vite—the dev environment library 
 
 In the build process, each page was identified by their component using the `internals.getPagesByComponent` map, incompatible with Astropi's logic. I replaced this with an internal key that combines both the route and the component, and I made sure that this change did not affect Astro's public API. 
 
-Although the work on the SSR part and navigating through multiple PR reviews was tedious, my contribution have been approved and should be included in Astro’s next minor release! 🎉
+Although the work on the SSR part and navigating through multiple PR reviews was tedious, my contribution has been approved and should be included in Astro’s next minor release! 🎉
 
 ## Release notes
 
