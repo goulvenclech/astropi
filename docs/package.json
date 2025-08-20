@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "@goulvenclech/astropi": "workspace:*",
-    "astro": "^4.10.2"
+    "astro": "^4.16.19"
   }
 }
